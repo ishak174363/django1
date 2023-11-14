@@ -1,0 +1,27 @@
+body{
+    background-color: aqua;
+}
+form{
+    border: 5px solid blue;
+    padding: 25px;
+}
+label{
+    color: blue;
+    font-size: 25px;
+    font-weight: 100px;
+}
+input{
+    width: 250px;
+    background-color: blue;
+    color: white;
+}
+#checkbox{
+    width: 200px;
+}
+#youtube_channel{
+    width: 20px;
+}
+.error_list{
+    color: red;
+    list-style: square;
+}

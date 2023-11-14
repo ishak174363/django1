@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/payment.css'%}">
+    <title>payment page</title>
+</head>
+<body>
+    {% if pay %}
+    <table>
+        <tr>
+            <th>id</th>
+            <th>pay_id</th>
+            <th>pay_option</th>
+            <th>min_pay</th>
+        </tr>
+       {% for py in pay%}
+        <tr>
+            <td>{{py.id}}</td>
+            <td>{{py.pay_id}}</td>
+            <td>{{py.pay_option}}</td>
+            <td>{{py.min_pay}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <h1>Not available</h1>
+    {%endif%}
+
+</body>
+</html>

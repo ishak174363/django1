@@ -1,0 +1,9 @@
+h1{
+    color: blue;
+    text-align: center;
+    padding-top: 300px;
+}
+form{
+    border: 5px solid blue;
+    padding: 25px;
+}

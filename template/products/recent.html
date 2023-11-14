@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/recent.css' %}">
+    <title>Recent....</title>
+</head>
+<body>
+    <!-- <form action="" method="get"> -->
+        <form action="" method="post">
+            {% csrf_token %} 
+            <!-- {{form.as_p}} -->
+            {%for field in form%}
+            {{field.label_tag}}
+            {{field}}    {{ field.help_text }} <br><br>
+            {{field.errors}}
+            {%endfor%}
+
+            {% if form.non_field_errors %}
+            <div class="non-field-errors">
+                {% for err in form.non_field_errors %}
+                <p class="form-error">{{ err }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+       <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
